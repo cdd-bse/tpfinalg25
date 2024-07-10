@@ -1,6 +1,6 @@
 const db = require('../db/db');
 
-// ************* Listar por ID ************* //
+// ************* Listar todo ************* //
 const ObtenerTodosLosProductos = (req,res)=>{
     const sql = 'SELECT * FROM productos';
     db.query(sql,(err,results)=>{
@@ -10,7 +10,7 @@ const ObtenerTodosLosProductos = (req,res)=>{
     });
 };
 
-// ************* Listar todo ************* //
+// ************* Listar por ID ************* //
 const ObtenerProductoPorId = (req,res)=>{
     const {id} = req.params;
     const sql = 'SELECT * FROM productos WHERE id = ? '
